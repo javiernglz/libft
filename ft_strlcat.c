@@ -1,47 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: frnavarr <frnavarr@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/12 12:14:36 by frnavarr          #+#    #+#             */
-/*   Updated: 2024/09/13 13:21:36 by frnavarr         ###   ########.fr       */
+/*   Updated: 2024/09/13 12:27:13 by frnavarr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-size_t	ft_strlcpy(char *dest, const char *src, size_t size)
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
 	size_t	i;
+	size_t	j;
 
 	i = 0;
-	while (src[i] != '\0' && i < size - 1)
+	while (i < size && dest[i] != '\0')
+		i++;
+	j = 0;
+	while (src[j] != '\0')
 	{
-		dest[i] = src[i];
+		dest[i] = src[j];
 		i++;
+		j++;
 	}
-	if (size > 0)
-		dest[i] = '\0';
-	while (src[i] != '\0')
-		i++;
-	return (i);
+	dest[i] = '\0';
+	return (size + dest[i]);
 }
 
 #include <stdio.h>
 
 int	main(void)
 {
-	char src[] = "Elena is annoying";
-	char dest[10];
-	size_t	len;
+	char dest[15] = "Buenas ";
+	char *src = "tardes";
+	size_t conc;
 
-	len = ft_strlcpy(dest, src, sizeof(dest));
-
-	printf("Cadena copiada en el destino: %s\n", dest);
-	printf("Longitud cadena inicial: %zu\n", len);
-	printf("size del buffer destino: %zu\n", sizeof(dest));
-
+	conc = ft_strlcat(dest, src, sizeof(dest));
+	printf("%s\n", dest);
+	printf("Longitud de la cadena concatenada: %zu\n", conc);
 	return (0);
 }
