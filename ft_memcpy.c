@@ -6,10 +6,11 @@
 /*   By: frnavarr <frnavarr@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/13 14:32:25 by frnavarr          #+#    #+#             */
-/*   Updated: 2024/09/13 14:42:54 by frnavarr         ###   ########.fr       */
+/*   Updated: 2024/09/17 11:07:04 by frnavarr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <string.h>
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)

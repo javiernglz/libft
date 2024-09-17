@@ -6,10 +6,11 @@
 /*   By: frnavarr <frnavarr@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/12 12:14:36 by frnavarr          #+#    #+#             */
-/*   Updated: 2024/09/13 12:27:13 by frnavarr         ###   ########.fr       */
+/*   Updated: 2024/09/17 11:07:19 by frnavarr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <string.h>
 
 size_t	ft_strlcat(char *dest, const char *src, size_t size)

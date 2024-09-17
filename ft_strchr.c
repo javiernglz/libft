@@ -6,10 +6,11 @@
 /*   By: frnavarr <frnavarr@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/13 13:22:42 by frnavarr          #+#    #+#             */
-/*   Updated: 2024/09/13 14:02:34 by frnavarr         ###   ########.fr       */
+/*   Updated: 2024/09/17 11:07:16 by frnavarr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <string.h>
 
 char	*ft_strchr(const char *s, int c)

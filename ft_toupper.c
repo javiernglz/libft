@@ -6,9 +6,11 @@
 /*   By: frnavarr <frnavarr@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/13 12:29:25 by frnavarr          #+#    #+#             */
-/*   Updated: 2024/09/13 12:32:31 by frnavarr         ###   ########.fr       */
+/*   Updated: 2024/09/17 11:07:43 by frnavarr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_toupper(char *str)
 {
