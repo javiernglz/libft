@@ -6,7 +6,7 @@
 #    By: frnavarr <frnavarr@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/17 11:45:11 by frnavarr          #+#    #+#              #
-#    Updated: 2024/09/17 12:16:11 by frnavarr         ###   ########.fr        #
+#    Updated: 2024/09/18 10:23:35 by frnavarr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ $(NAME): $(OBJ)
 	
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
-	
+
 clean:
 	rm -f $(OBJ)
 

@@ -6,34 +6,35 @@
 /*   By: frnavarr <frnavarr@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/13 14:32:25 by frnavarr          #+#    #+#             */
-/*   Updated: 2024/09/17 11:07:04 by frnavarr         ###   ########.fr       */
+/*   Updated: 2024/09/18 11:23:22 by frnavarr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	size_t	i;
+	unsigned char *d = (unsigned char *)dest;
+	const unsigned char	*s = (const unsigned char *)src;
 
 	i = 0;
+	if (!dest && !src)
+		return (NULL);
 	while (i < n)
 	{
-		((char *)dest)[i] = ((char *)src)[i];
+		d[i] = s[i];
 		i++;
 	}
 	return (dest);
 }
 
-#include <stdio.h>
-
 int	main(void)
 {
-	char	src[] = "Malaguita";
-	char	dest[20];
+	unsigned char	src[] = "Malaguita";
+	unsigned char	*dest;
 	size_t	n;
-	
+
 	n = 13;
 
 	ft_memcpy(dest, src, n);
