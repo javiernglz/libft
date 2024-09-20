@@ -1,22 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: frnavarr <frnavarr@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/16 16:29:15 by frnavarr          #+#    #+#             */
-/*   Updated: 2024/09/20 17:46:28 by frnavarr         ###   ########.fr       */
+/*   Created: 2024/09/20 17:45:14 by frnavarr          #+#    #+#             */
+/*   Updated: 2024/09/20 17:58:46 by frnavarr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t len)
+int	ft_atoi(const char *str)
 {
-	unsigned char	*ptr;
+	int	res;
+	int	sign;
+	int	i;
 
-	ptr = (unsigned char *)s;
-	while (len--)
-		*ptr++ = 0;
+	res = 0;
+	sign = 1;
+	i = 0;
+	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
+		str++;
+
+	if (str[i] == '-' || str[i] == '+')
+	{
+		if (str[i] == '-')
+			sign = -1;
+		else
+			sign = 1;
+		str++;
+	}
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		res = res * 10 + (str[i] - '0');
+		str++;
+	}
+	return (sign * res);
 }

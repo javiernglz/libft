@@ -6,7 +6,7 @@
 /*   By: frnavarr <frnavarr@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 10:53:20 by frnavarr          #+#    #+#             */
-/*   Updated: 2024/09/18 11:06:47 by frnavarr         ###   ########.fr       */
+/*   Updated: 2024/09/20 18:02:31 by frnavarr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 # include <stddef.h>
 # include <stdio.h>
 # include <string.h>
+# include <stdlib.h>
 
 void	ft_bzero(void *s, size_t len);
 void	*ft_calloc(size_t count, size_t size);

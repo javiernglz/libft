@@ -6,7 +6,7 @@
 /*   By: frnavarr <frnavarr@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 16:30:31 by frnavarr          #+#    #+#             */
-/*   Updated: 2024/09/20 16:51:37 by frnavarr         ###   ########.fr       */
+/*   Updated: 2024/09/20 16:56:42 by frnavarr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,12 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 
 int	main(void)
 {
-	int res;
-	char	s1[] = "Hola";
-	char	s2[] = "Holw";
-	size_t n = 2;
+	int	res;
+	char		s1[] = "Hola";
+	char		s2[] = "Holw";
+	size_t	n;
+
+	n = 3;
 	res = ft_memcmp(s1, s2, n);
 
 	if (res > 0)
