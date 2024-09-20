@@ -6,7 +6,7 @@
 /*   By: frnavarr <frnavarr@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/13 14:06:10 by frnavarr          #+#    #+#             */
-/*   Updated: 2024/09/17 11:07:34 by frnavarr         ###   ########.fr       */
+/*   Updated: 2024/09/20 14:30:00 by frnavarr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,6 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 	}
 	return (0);
 }
-
-#include <stdio.h>
 
 int	main(void)
 {

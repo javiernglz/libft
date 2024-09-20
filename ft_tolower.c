@@ -6,7 +6,7 @@
 /*   By: frnavarr <frnavarr@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/13 12:30:41 by frnavarr          #+#    #+#             */
-/*   Updated: 2024/09/17 11:07:37 by frnavarr         ###   ########.fr       */
+/*   Updated: 2024/09/20 16:04:48 by frnavarr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,6 @@ char	*ft_tolower(char *str)
 	}
 	return (str);
 }
-
-#include <stdio.h>
 
 int	main(void)
 {
