@@ -1,38 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: frnavarr <frnavarr@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/13 12:29:25 by frnavarr          #+#    #+#             */
-/*   Updated: 2024/09/26 18:28:40 by frnavarr         ###   ########.fr       */
+/*   Created: 2024/09/26 16:50:03 by frnavarr          #+#    #+#             */
+/*   Updated: 2024/09/26 18:32:20 by frnavarr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-char	*ft_toupper(char *str)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	int	i;
+	size_t	start;
+	size_t	end;
 
-	i = 0;
-	while (str[i] != '\0')
-	{
-		if (str[i] >= 'a' && str[i] <= 'z')
-		{
-			str[i] -= 32;
-		}
-		i++;
-	}
-	return (str);
+	if (!s1 || !set)
+		return (NULL);
+	start = 0;
+	while (s1[start] && strchr(set, s1[start]))
+		start++;
+	end = strlen(s1);
+	while (end > start && strchr(set, s1[end - 1]))
+		end--;
+	return (ft_substr(s1, start, end - start));
 }
-
-/* int	main(void)
-{
-	char str[] = "cuarenta y dos";
-	ft_toupper(&str[0]);
-	printf("%s", str);
-	return (0);
-}
- */

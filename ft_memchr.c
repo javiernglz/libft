@@ -6,7 +6,7 @@
 /*   By: frnavarr <frnavarr@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 09:59:27 by frnavarr          #+#    #+#             */
-/*   Updated: 2024/09/20 16:04:00 by frnavarr         ###   ########.fr       */
+/*   Updated: 2024/09/26 18:29:36 by frnavarr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned char *ptr;
-	size_t i;
+	size_t			i;
+	unsigned char	*ptr;
 
 	ptr = (unsigned char *)s;
 	i = 0;

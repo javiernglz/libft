@@ -6,7 +6,7 @@
 /*   By: frnavarr <frnavarr@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/13 12:30:41 by frnavarr          #+#    #+#             */
-/*   Updated: 2024/09/20 16:04:48 by frnavarr         ###   ########.fr       */
+/*   Updated: 2024/09/26 18:28:23 by frnavarr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,11 @@ char	*ft_tolower(char *str)
 	return (str);
 }
 
-int	main(void)
+/* int	main(void)
 {
 	char str[] = "CUARENTA Y DOS";
 
 	ft_tolower(&str[0]);
 	printf("%s", str);
 	return (0);
-}
+} */

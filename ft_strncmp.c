@@ -6,7 +6,7 @@
 /*   By: frnavarr <frnavarr@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/13 14:06:10 by frnavarr          #+#    #+#             */
-/*   Updated: 2024/09/20 14:30:00 by frnavarr         ###   ########.fr       */
+/*   Updated: 2024/09/26 18:28:01 by frnavarr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 	return (0);
 }
 
-int	main(void)
+/* int	main(void)
 {
 	int	size;
 
@@ -44,4 +44,4 @@ int	main(void)
 	else
 		printf("The strings are =.");
 	return (0);
-}
+} */

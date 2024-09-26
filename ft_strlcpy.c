@@ -6,7 +6,7 @@
 /*   By: frnavarr <frnavarr@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/12 12:14:36 by frnavarr          #+#    #+#             */
-/*   Updated: 2024/09/20 14:25:44 by frnavarr         ###   ########.fr       */
+/*   Updated: 2024/09/26 18:27:37 by frnavarr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	return (i);
 }
 
-int	main(void)
+/* int	main(void)
 {
 	char src[] = "Elena is annoying";
 	char dest[10];
@@ -42,4 +42,4 @@ int	main(void)
 	printf("size del buffer destino: %zu\n", sizeof(dest));
 
 	return (0);
-}
+} */

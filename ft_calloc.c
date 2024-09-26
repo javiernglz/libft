@@ -6,14 +6,11 @@
 /*   By: frnavarr <frnavarr@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 15:59:20 by frnavarr          #+#    #+#             */
-/*   Updated: 2024/09/17 11:06:34 by frnavarr         ###   ########.fr       */
+/*   Updated: 2024/09/26 17:57:24 by frnavarr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
-#include <stddef.h>
-#include <stdio.h>
 
 void	ft_bzero(void *s, size_t len)
 {
@@ -35,7 +32,7 @@ void	*ft_calloc(size_t count, size_t size)
 	return (ptr);
 }
 
-int	main(void)
+/* int	main(void)
 {
 	// Ejemplo: Reservar memoria para un array de 10 enteros
 	size_t count = 10;
@@ -59,4 +56,4 @@ int	main(void)
     // Liberar la memoria
 	free(arr);
 	return (0);
-}
+} */

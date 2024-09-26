@@ -6,7 +6,7 @@
 /*   By: frnavarr <frnavarr@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 16:57:37 by frnavarr          #+#    #+#             */
-/*   Updated: 2024/09/20 17:43:28 by frnavarr         ###   ########.fr       */
+/*   Updated: 2024/09/26 18:30:29 by frnavarr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	return (0);
 }
 
-int	main(void)
+/* int	main(void)
 {
 	const char *largestring = "Foo Bar Baz";
 	const char *smallstring = "Bar";
@@ -50,3 +50,4 @@ int	main(void)
 		printf("No encontrado.\n");
 	return (0);
 }
+ */
