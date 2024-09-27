@@ -6,7 +6,7 @@
 /*   By: frnavarr <frnavarr@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 16:50:03 by frnavarr          #+#    #+#             */
-/*   Updated: 2024/09/27 12:08:09 by frnavarr         ###   ########.fr       */
+/*   Updated: 2024/09/27 16:40:54 by frnavarr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,3 +27,15 @@ char	*ft_strtrim(char const *s1, char const *set)
 		end--;
 	return (ft_substr(s1, start, end - start));
 }
+
+/* int	main(void)
+{
+	char	*s;
+	char	*set;
+
+	set = "_abc";
+	s = "abc_SABADOba_c";
+	printf("%s\n",ft_strtrim(s, set));
+	return (0);
+}
+ */

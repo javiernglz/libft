@@ -5,101 +5,51 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: frnavarr <frnavarr@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/26 16:52:19 by frnavarr          #+#    #+#             */
-/*   Updated: 2024/09/26 18:36:04 by frnavarr         ###   ########.fr       */
+/*   Created: 2024/09/27 17:15:35 by frnavarr          #+#    #+#             */
+/*   Updated: 2024/09/27 17:59:25 by frnavarr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	word_count(const char *s, char c)
+int	word_count (char const *s, char c)
 {
 	int	count;
-
+	int	i;
+	char *str;
+	
+	str = ft_strtrim(s, &c);
+	i = 0;
 	count = 0;
-	while (*s)
+	while (str[i])
 	{
-		if (*s != c)
+		while (str[i] && str[i] != c)
+			i++;
+		if (str[i] == c)
 		{
 			count++;
-			while (*s && *s != c)
-				s++;
-		}
-		else
-			s++;
-	}
-	return (count);
-}
-
-char	*ft_substr(char const *s, unsigned int start, size_t len)
-{
-	char	*subs;
-	size_t	i;
-
-	if (!s)
-		return (NULL);
-	if (start >= ft_strlen(s))
-		return (ft_strdup(""));
-	subs = malloc((len + 1) * sizeof(char));
-	if (!subs)
-		return (NULL);
-	i = 0;
-	while (i < len)
-	{
-		subs[i] = s[start];
-		i++;
-		start++;
-	}
-	subs[i] = '\0';
-	return (subs);
-}
-
-char	**ft_split(char const *s, char c)
-{
-	int	i;
-	int		words = word_count(s, c);
-	char	**result = ft_calloc(words + 1, sizeof(char *));
-
-	if (!s)
-		return (NULL);
-	if (!result)
-		return (NULL);
-	i = 0;
-	while (*s)
-	{
-		if (*s != c)
-		{
-			int			len;
-			const char	*start;
-
-			start = s;
-			len = 0;
-			while (*s && *s != c)
-			{
-				len++;
-				s++;
-			}
-			result[i++] = ft_substr(start, 0, len);
-		}
-		else
-		{
-			s++;
+			while (str[i] == c)
+				i++;
 		}
 	}
-	result[i] = NULL;
-	return (result);
+	return (count + 1);
+			
 }
-/* int main(void)
+
+char **ft_split(char const *s, char c)
 {
-char	**split_result = ft_split("Hola mundo, esto es C", ' ');
+	char **split;
+	size_t	res;
+	res = word_count(s, c);
+	
+	split = (char **)malloc( res * sizeof(*char));
+}
 
-	for (int i = 0; split_result[i]; i++)
-	{
-		printf("%s\n", split_result[i]);
-		free(split_result[i]);
-	}
+int main (void)
+{
+	int res;
 
-	free(split_result);
+	res = word_count("  Hola   cuantas palabras    hay", ' ');
+	printf("%d", res);
 	return (0);
 }
- */

@@ -6,7 +6,7 @@
 /*   By: frnavarr <frnavarr@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 18:00:47 by frnavarr          #+#    #+#             */
-/*   Updated: 2024/09/27 12:02:41 by frnavarr         ###   ########.fr       */
+/*   Updated: 2024/09/27 12:54:38 by frnavarr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strdup(const char *s)
 	return (copy);
 }
 
-int	main(void)
+/* int	main(void)
 {
 	char	*str = "Telefonica";
 	char	*copy = ft_strdup(str);
@@ -37,3 +37,4 @@ int	main(void)
 	}
 	return (0);
 }
+ */

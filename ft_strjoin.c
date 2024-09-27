@@ -1,47 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: frnavarr <frnavarr@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/27 12:13:32 by frnavarr          #+#    #+#             */
-/*   Updated: 2024/09/27 16:24:37 by frnavarr         ###   ########.fr       */
+/*   Created: 2024/09/27 15:46:54 by frnavarr          #+#    #+#             */
+/*   Updated: 2024/09/27 16:14:41 by frnavarr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*subs;
-	size_t	i;
+	char	*join;
 
-	if (ft_strlen(s) < start)
-		return (ft_strdup(""));
-	if (ft_strlen(s) < start + len)
-		len = ft_strlen(s) - start;
-	i = 0;
-	subs = malloc((len + 1) * sizeof(char));
-	if (!subs)
+	join = malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));
+	if (!join)
 		return (NULL);
-	while (i < len)
-	{
-		subs[i] = s[start];
-		i++;
-		start++;
-	}
-	subs[i] = '\0';
-	return (subs);
+	ft_strlcpy(join, s1, sizeof(s1));
+	ft_strlcpy(join + ft_strlen(s1), s2, sizeof(s2));
+	return (join);
 }
 
 /* int	main(void)
 {
-	char str[] = "Ya es otoño!!!!!";
-	char *sub = ft_substr(str, 6, 6);
+	char	*join;
+	char s1[15] = "Buenas";
+	char *s2 = "tardes";
 
-	printf("Subcadena:%s\n", sub);
-	free(sub);
+	join = ft_strjoin(s1, s2);
+	printf("%s\n", join);
+	free(join);
 	return (0);
-}
- */
+} */
