@@ -6,7 +6,7 @@
 /*   By: frnavarr <frnavarr@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 18:42:24 by frnavarr          #+#    #+#             */
-/*   Updated: 2024/09/26 19:02:33 by frnavarr         ###   ########.fr       */
+/*   Updated: 2024/09/27 12:05:14 by frnavarr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,6 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		res[i] = f(i, s[i]);
 		i++;
 	}
-	res[len] = '\\0';
+	res[len] = '\0';
 	return (res);
 }

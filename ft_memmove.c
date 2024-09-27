@@ -6,7 +6,7 @@
 /*   By: frnavarr <frnavarr@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/13 14:45:15 by frnavarr          #+#    #+#             */
-/*   Updated: 2024/09/26 18:23:36 by frnavarr         ###   ########.fr       */
+/*   Updated: 2024/09/27 11:29:13 by frnavarr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	return (dest);
 }
 
-int	main(void)
+/* int	main(void)
 {
 	unsigned char	*src;
 	unsigned char	dest[sizeof(src)];
@@ -60,3 +60,4 @@ int	main(void)
 	printf("%s\n", dest);
 	return (0);
 }
+ */
