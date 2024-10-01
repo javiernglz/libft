@@ -6,7 +6,7 @@
 /*   By: frnavarr <frnavarr@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/12 12:14:36 by frnavarr          #+#    #+#             */
-/*   Updated: 2024/09/26 18:27:37 by frnavarr         ###   ########.fr       */
+/*   Updated: 2024/10/01 16:12:13 by frnavarr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,22 @@
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
-	size_t	i;
+	size_t	src_len;
 
-	i = 0;
-	while (src[i] != '\0' && i < size - 1)
+	src_len = ft_strlen(src);
+	if (src_len + 1 < size)
+		ft_memcpy(dest, src, src_len + 1);
+	else if (size != 0)
 	{
-		dest[i] = src[i];
-		i++;
+		ft_memcpy(dest, src, size - 1);
+		dest[size - 1] = 0;
 	}
-	if (size > 0)
-		dest[i] = '\0';
-	while (src[i] != '\0')
-		i++;
-	return (i);
+	return (src_len);
 }
 
 /* int	main(void)
 {
-	char src[] = "Elena is annoying";
+	char src[] = "Quiero copiar la cadena";
 	char dest[10];
 	size_t	len;
 

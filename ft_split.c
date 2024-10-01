@@ -6,11 +6,11 @@
 /*   By: frnavarr <frnavarr@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 17:15:35 by frnavarr          #+#    #+#             */
-/*   Updated: 2024/09/27 17:59:25 by frnavarr         ###   ########.fr       */
+/*   Updated: 2024/10/01 16:12:31 by frnavarr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+/* #include "libft.h"
 
 int	word_count (char const *s, char c)
 {
@@ -52,4 +52,4 @@ int main (void)
 	res = word_count("  Hola   cuantas palabras    hay", ' ');
 	printf("%d", res);
 	return (0);
-}
+} */
