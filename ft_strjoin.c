@@ -6,7 +6,7 @@
 /*   By: frnavarr <frnavarr@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 15:46:54 by frnavarr          #+#    #+#             */
-/*   Updated: 2024/09/27 16:14:41 by frnavarr         ###   ########.fr       */
+/*   Updated: 2024/10/02 13:12:16 by frnavarr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,17 @@ char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*join;
 
+	if (!s1 && !s2)
+		return (NULL);
+	if (!s1)
+		return (ft_strdup(s2));
+	if (!s2)
+		return (ft_strdup(s1));
 	join = malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));
 	if (!join)
 		return (NULL);
-	ft_strlcpy(join, s1, sizeof(s1));
-	ft_strlcpy(join + ft_strlen(s1), s2, sizeof(s2));
+	ft_strlcpy(join, s1, ft_strlen(s1) + 1);
+	ft_strlcpy(join + ft_strlen(s1), s2, ft_strlen(s2) + 1);
 	return (join);
 }
 

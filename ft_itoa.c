@@ -1,43 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: frnavarr <frnavarr@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/20 14:34:14 by frnavarr          #+#    #+#             */
-/*   Updated: 2024/10/02 12:35:21 by frnavarr         ###   ########.fr       */
+/*   Created: 2024/10/02 12:46:29 by frnavarr          #+#    #+#             */
+/*   Updated: 2024/10/02 13:04:23 by frnavarr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+char	*ft_itoa(int n)
 {
-	int	i;
+	char	*res;
+	int		len;
+	int		is_negative;
 
-	i = ft_strlen(s);
-	if (c == '\0')
-		return ((char *)&s[i]);
-	while (i > 0)
-	{
-		if (s[i - 1] == (unsigned char)c)
-			return ((char *)&s[i - 1]);
-		i--;
-	}
-	return (0);
+	res = (char *)malloc((len + 1) * sizeof(char));
+	if (!res)
+		return (NULL);
+	if (is_negative)
+		n = -n;
+	while (n > 0)
+		res = (n % 10) + 48;
+	return (res);
 }
-
-/* int	main(void)
-{
-	const char *str = "museo ruso!";
-	char *res;
-
-	res = ft_strrchr(str, 'u');
-
-	if (res)
-		printf("%s\n", res);
-	else
-		printf("Carácter no encontrado\n");
-	return (0);
-} */
