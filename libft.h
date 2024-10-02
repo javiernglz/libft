@@ -6,7 +6,7 @@
 /*   By: frnavarr <frnavarr@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 10:53:20 by frnavarr          #+#    #+#             */
-/*   Updated: 2024/10/02 11:34:51 by frnavarr         ###   ########.fr       */
+/*   Updated: 2024/10/02 12:18:49 by frnavarr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
-char	*ft_tolower(char *str);
-char	*ft_toupper(char *str);
+int		ft_tolower(int c);
+int		ft_toupper(int c);
 
 #endif
