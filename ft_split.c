@@ -6,7 +6,7 @@
 /*   By: frnavarr <frnavarr@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 17:15:35 by frnavarr          #+#    #+#             */
-/*   Updated: 2024/10/04 16:27:06 by frnavarr         ###   ########.fr       */
+/*   Updated: 2024/10/04 18:58:51 by frnavarr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,23 @@
 
 static int	ft_countstr(char const *s, char c)
 {
-	int		count;
 	int		i;
-	char	*str;
+	int		count;
 
-	str = ft_strtrim(s, &c);
 	i = 0;
 	count = 0;
-	if (!str)
-		return (0);
-	while (str[i])
+	while (s[i])
 	{
-		while (str[i] && str[i] != c)
-			i++;
-		if (str[i] == c)
+		if (s[i] != c)
 		{
 			count++;
-			while (str[i] == c)
+			while (s[i] && s[i] != c)
 				i++;
 		}
+		else
+			i++;
 	}
-	free (str);
-	return (count + 1);
+	return (count);
 }
 
 static size_t	ft_subslen(char const *s, char c, int i)
@@ -51,51 +46,41 @@ static size_t	ft_subslen(char const *s, char c, int i)
 	return (len);
 }
 
-static void	ft_strfree(char **ptr)
+static void	ft_strfree(char **s, int j)
 {
-	int	i;
-
-	i = 0;
-	while (ptr[i])
+	while (j > 0)
 	{
-		free(ptr[i]);
-		ptr[i] = NULL;
-		i++;
+		free(s[j - 1]);
+		j--;
 	}
-	free(ptr);
-	ptr = NULL;
+	free(s);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	char	**split;
-	int		count;
 	int		i;
 	int		j;
-	size_t	len;
 
-	if (!s)
-		return (NULL);
-	count = ft_countstr(s, c);
-	if (count == 0)
-		return (NULL);
-	split = (char **)malloc((count + 1) * sizeof(char *));
+	split = (char **)malloc((ft_countstr(s, c) + 1) * sizeof(char *));
 	if (!split)
 		return (NULL);
 	i = 0;
 	j = 0;
-	while (s[i] && j < count)
+	while (j < ft_countstr(s, c))
 	{
 		while (s[i] == c)
 			i++;
-		len = ft_subslen(s, c, i);
-		split[j] = ft_substr(s, i, len);
+		split[j] = ft_substr(s, i, ft_subslen(s, c, i));
 		if (!split[j])
-			return (ft_strfree(split), NULL);
-		i = i + len;
+		{
+			ft_strfree(split, j);
+			return (0);
+		}
+		i = i + ft_subslen(s, c, i);
 		j++;
 	}
-	split[j] = NULL;
+	split[j] = 0;
 	return (split);
 }
 
