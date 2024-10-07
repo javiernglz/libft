@@ -1,15 +1,3 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: frnavarr <frnavarr@student.42malaga.com    +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/09/17 11:45:11 by frnavarr          #+#    #+#              #
-#    Updated: 2024/10/04 15:32:04 by frnavarr         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 NAME = libft.a
@@ -22,12 +10,18 @@ SRC =	ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c \
 		ft_strlen.c ft_strmapi.c ft_strncmp.c ft_strnstr.c ft_strrchr.c \
 	 	ft_strtrim.c ft_substr.c ft_tolower.c ft_toupper.c
 
+SRC_BONUS =	ft_lstnew.c 
+
 OBJ = $(SRC:.c=.o)
+OBJ_BONUS = $(SRC_BONUS:.c=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
 	ar rcs $(NAME) $(OBJ)
+
+bonus:	$(OBJ) $(OBJ_BONUS)
+		ar rcs $(NAME) $(OBJ) $(OBJ_BONUS)
 	
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
