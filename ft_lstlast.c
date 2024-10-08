@@ -1,39 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: frnavarr <frnavarr@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/07 17:45:42 by frnavarr          #+#    #+#             */
-/*   Updated: 2024/10/08 10:23:02 by frnavarr         ###   ########.fr       */
+/*   Created: 2024/10/08 11:05:01 by frnavarr          #+#    #+#             */
+/*   Updated: 2024/10/08 14:30:03 by frnavarr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+t_list	*ft_lstlast(t_list *lst)
 {
-	t_list	*new_node;
+	t_list	*tmp;
 
-	new_node = malloc(sizeof(t_list));
-	if (!new_node)
+	if (!lst)
 		return (NULL);
-	new_node->content = content;
-	new_node->next = NULL;
-	return (new_node);
+	tmp = lst;
+	while (tmp->next)
+		tmp = tmp->next;
+	return (tmp);
 }
-
-/* int	main(void)
-{
- 	char 	*s = "Lists work like this";
-	t_list *node = ft_lstnew((void *)s);
-	if (node == NULL)
-	{
-		printf("Failed to allocate memory.\n");
-		return (1);
-	}
-	printf("Node content: %s\n", (char *)node->content);
-	free(node);
-	return (0);
- } */

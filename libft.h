@@ -6,7 +6,7 @@
 /*   By: frnavarr <frnavarr@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 10:53:20 by frnavarr          #+#    #+#             */
-/*   Updated: 2024/10/07 18:08:41 by frnavarr         ###   ########.fr       */
+/*   Updated: 2024/10/08 10:24:07 by frnavarr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,6 @@ typedef struct s_list
 	struct s_list	*next;
 }	t_list;
 
-
-t_list *ft_lstnew(void *content);
+t_list	*ft_lstnew(void *content);
 
 #endif
