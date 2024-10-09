@@ -6,15 +6,15 @@
 /*   By: frnavarr <frnavarr@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 10:53:20 by frnavarr          #+#    #+#             */
-/*   Updated: 2024/10/09 11:26:11 by frnavarr         ###   ########.fr       */
+/*   Updated: 2024/10/09 13:25:12 by frnavarr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
 # include <stddef.h>
 # include <stdio.h>
-# include <string.h>
 # include <stdlib.h>
 # include <unistd.h>
 

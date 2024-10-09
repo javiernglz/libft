@@ -6,7 +6,7 @@
 /*   By: frnavarr <frnavarr@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/11 18:08:34 by frnavarr          #+#    #+#             */
-/*   Updated: 2024/10/02 12:59:18 by frnavarr         ###   ########.fr       */
+/*   Updated: 2024/10/09 12:55:09 by frnavarr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,3 +26,12 @@ void	*ft_memset(void *ptr, int value, size_t num)
 	}
 	return (ptr);
 }
+
+/* int main(void)
+{
+    char s[50] = "Hola, mundo!";
+	
+    ft_memset(s, '*', 5);
+    printf("%s\n", s);
+    return (0);
+} */
